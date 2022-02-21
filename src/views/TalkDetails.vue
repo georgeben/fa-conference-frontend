@@ -30,6 +30,14 @@
                 :alt="`${talk.speaker.name} photo`"
               />
               <!-- Twitter and Linkedin goes here -->
+              <div class="flex">
+                <a v-if="talk.speaker.socials && talk.speaker.socials.twitter" :href="talk.speaker.socials.twitter" target="_blank">
+                  <img class="w-8" src="../assets/images/icons8-twitter.svg" alt="" />
+                </a>
+                <a v-if="talk.speaker.socials && talk.speaker.socials.linkedin" :href="talk.speaker.socials.linkedin" target="_blank">
+                  <img class="w-8" src="../assets/images/icons8-linkedin.svg" alt="" />
+                </a>
+              </div>
             </div>
             <div class="p-5">
               <p class="text-lg">{{ talk.speaker.name }}</p>
