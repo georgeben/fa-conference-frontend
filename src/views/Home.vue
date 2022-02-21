@@ -1,18 +1,34 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home h-full">
+    <div class="mt-32 text-center w-2/3 mx-auto">
+      <h1 class="text-2xl md:text-4xl leading-loose my-4">Future Africa Conference</h1>
+      <p class="text-lg leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit magnam fuga molestiae explicabo minima sapiente sunt iste ratione, id similique error facilis alias natus libero quisquam vero accusantium, provident voluptates?</p>
+
+      <div class="actions mt-10">
+        <router-link to="/talks" class=" bg-primary border-primary border-2 text-white rounded-full py-3 px-7 mr-4">
+          Get Started
+        </router-link>
+
+        <router-link to="/submit" class="py-3 px-7 rounded-full border-accent border-2 text-gray-500">
+          Submit Talk
+        </router-link>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    
   }
 }
 </script>
+
+<style>
+h1, h2, h3, h4, h5 {
+  font-family: 'Libre Baskerville', serif;
+}
+</style>

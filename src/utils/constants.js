@@ -1,0 +1,1 @@
+export const TOKEN = "FA_AUTH_TOKEN";

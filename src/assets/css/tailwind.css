@@ -1,0 +1,9 @@
+@tailwind base;
+p{
+  font-family: 'Lato', sans-serif;
+}
+@tailwind components;
+.navbar.nav-solid {
+  @apply bg-white shadow-lg;
+}
+@tailwind utilities;
