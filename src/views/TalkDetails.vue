@@ -59,6 +59,7 @@
             Only attendees can join the discussion
           </p>
           <div v-else class="flex flex-col mt-4 min-h-full">
+            <p class="text-gray-500 text-sm" v-if="!messages.length">Nothing here yet...Be the first to say something</p>
             <div class="messages max-h-96 overflow-hidden overflow-y-scroll">
               <div
                 v-for="message in messages"
