@@ -10,9 +10,12 @@ import "../node_modules/nprogress/nprogress.css";
 import { TOKEN } from "./utils/constants";
 import { setAuthHeader } from "./lib/httpClient";
 import { storage } from "./utils";
+import config from "./config"
+
+const { socketServer } = config
 
 Vue.use(Toasted);
-const socket = io('http://localhost:9001', {
+const socket = io(socketServer, {
   auth: {
     token: storage.loadState(TOKEN)
   }
