@@ -22,7 +22,7 @@ export default {
     gapi.load("auth2", async () => {
       const auth2 = window.gapi.auth2.init({
         client_id:
-          "318212069595-88j5mm4gp95mji5f1430amt3u3il1i2n.apps.googleusercontent.com",
+          "318212069595-s7j0qdvr18ken4dhbf9s1ko7a55pnrvo.apps.googleusercontent.com",
         cookiepolicy: "single_host_origin",
       });
       // eslint-disable-next-line no-undef
