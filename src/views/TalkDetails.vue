@@ -20,7 +20,7 @@
         <div>
           <h3 class="text-xl mt-10 mb-6">About the Speaker</h3>
           <div class="flex">
-            <div class="w-1/3">
+            <div class="w-1/4">
               <img
                 class="w-full rounded-md mr-10 p-5"
                 :src="
@@ -30,7 +30,7 @@
                 :alt="`${talk.speaker.name} photo`"
               />
               <!-- Twitter and Linkedin goes here -->
-              <div class="flex">
+              <div class="flex px-5">
                 <a v-if="talk.speaker.socials && talk.speaker.socials.twitter" :href="talk.speaker.socials.twitter" target="_blank">
                   <img class="w-8" src="../assets/images/icons8-twitter.svg" alt="" />
                 </a>
@@ -39,7 +39,7 @@
                 </a>
               </div>
             </div>
-            <div class="p-5">
+            <div class="p-5 w-3/4">
               <p class="text-lg">{{ talk.speaker.name }}</p>
               <p class="text-primary">
                 {{ talk.speaker.professionalTitle }}
