@@ -2,7 +2,9 @@
   <div>
     <div class="w-5/6 mx-auto mt-10 flex">
       <div class="w-2/3 bg-white p-5">
-        <router-link to="/talks" class="text-xs text-gray-400">&lt;Back </router-link>
+        <router-link to="/talks" class="text-xs text-gray-400"
+          >&lt;Back
+        </router-link>
         <h1 class="capitalize text-3xl leading-loose">{{ talk.title }}</h1>
         <p class="text-gray-500 leading-relaxed">{{ talk.description }}</p>
 
@@ -18,9 +20,9 @@
         <div>
           <h3 class="text-xl mt-10 mb-6">About the Speaker</h3>
           <div class="flex">
-            <div>
+            <div class="w-1/3">
               <img
-                class="h-60 rounded-md mr-10 p-5"
+                class="w-full rounded-md mr-10 p-5"
                 :src="
                   (talk.speaker && talk.speaker.photoUrl) ||
                   require('../assets/images/default-photo.jpeg')
@@ -29,7 +31,7 @@
               />
               <!-- Twitter and Linkedin goes here -->
             </div>
-            <div>
+            <div class="p-5">
               <p class="text-lg">{{ talk.speaker.name }}</p>
               <p class="text-primary">
                 {{ talk.speaker.professionalTitle }}
@@ -69,14 +71,18 @@
                 </div>
               </div>
             </div>
-            <div class="input absolute bottom-0 w-11/12 left-0 mt-3 mx-2 mb-2 flex justify-between">
+            <div
+              class="input absolute bottom-0 w-11/12 left-0 mt-3 mx-2 mb-2 flex justify-between"
+            >
               <input
                 v-model="text"
                 class="w-full p-3 text-gray-700 leading-tight focus:outline-none border border-gray-300 rounded-lg"
                 placeholder="Type message"
                 type=""
               />
-              <button class="mx-2 text-primary" @click="sendMessage">Send</button>
+              <button class="mx-2 text-primary" @click="sendMessage">
+                Send
+              </button>
             </div>
           </div>
         </div>

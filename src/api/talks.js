@@ -14,5 +14,8 @@ export default {
   },
   getChats(roomId) {
     return httpClient.get(`${endpoint}/${roomId}/chats`)
+  },
+  submit(payload) {
+    return httpClient.post(endpoint, payload)
   }
 }

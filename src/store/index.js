@@ -6,6 +6,7 @@ import AuthAPI from "../api/auth"
 import { storage } from "../utils";
 import { TOKEN } from "../utils/constants";
 import { removeAuthHeader, setAuthHeader } from "../lib/httpClient";
+import handleError from "../utils/handleError"
 
 Vue.use(Vuex)
 
@@ -67,8 +68,17 @@ export default new Vuex.Store({
       } catch (error) {
         if (error.response.status < 500) {
           dispatch("logout")
-
         }
+      }
+    },
+    async submitTalk({ dispatch }, payload) {
+      try {
+        console.log("Submitting talk", payload)
+        await TalkAPI.submit(payload)
+        dispatch("listTalks")
+        return true;
+      } catch (error) {
+        handleError(error)
       }
     },
     logout({ commit }) {

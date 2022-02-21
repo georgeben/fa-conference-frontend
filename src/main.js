@@ -6,6 +6,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import "@/assets/css/tailwind.css";
+import "../node_modules/nprogress/nprogress.css";
 import { TOKEN } from "./utils/constants";
 import { setAuthHeader } from "./lib/httpClient";
 import { storage } from "./utils";

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Talks from "../views/Talks.vue"
 import TalkDetails from "../views/TalkDetails.vue"
+import SubmitTalk from "../views/SubmitTalk.vue"
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/talks/:slug',
     name: 'TalkDetails',
     component: TalkDetails
+  },
+  {
+    path: '/submit',
+    name: 'SubmitTalk',
+    component: SubmitTalk
   },
   {
     path: '/about',
